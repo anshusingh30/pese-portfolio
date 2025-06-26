@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback - ANSHU SINGH Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">ANSHU SINGH</div>
+            <ul class="nav-links">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="index.html#about"><i class="fas fa-user"></i> About</a></li>
+                <li><a href="index.html#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html#introduction"><i class="fas fa-info-circle"></i> Introduction</a></li>
+            <li><a href="resume.html"><i class="fas fa-file-alt"></i> Resume</a></li>
+            <li><a href="interview_videos.html"><i class="fas fa-video"></i> Interview Videos</a></li>
+            <li><a href="gd_session.html"><i class="fas fa-users"></i> GD Session</a></li>
+            <li><a href="session_summaries.html"><i class="fas fa-chalkboard-teacher"></i> Session Summary</a></li>
+            <li><a href="feedback.html"><i class="fas fa-comments"></i> Feedback</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <section class="feedback-section scrollreveal">
+            <div class="content-container">
+                <h1>Feedback on PESE (Career Skills) Classes</h1>
+                <div class="feedback-content">
+                    <div class="feedback-intro">
+                        <p>Throughout the 7–8 PESE sessions, I had the opportunity to participate in a range of activities designed to enhance communication and professional skills. While the sessions were valuable, I believe there is potential to make them even more impactful and engaging for students like myself.</p>
+                    </div>
+
+                    <div class="feedback-points">
+                        <h3>Session Structure and Participation</h3>
+                        <p>Group Discussions (GDs) proved to be highly effective in building confidence and communication skills. I recommend incorporating more interactive elements, such as regular GDs and collaborative activities, to encourage active participation from all students.</p>
+
+                        <h3>Suggested Improvements</h3>
+                        <p>Short, focused GDs and real-world scenarios can be included in every session, allowing everyone to practice and improve their speaking and critical thinking skills.</p>
+
+                        <h3>Activity Relevance</h3>
+                        <p>Replacing less relevant activities with skill-building exercises—such as mock interviews, presentations, and role-playing—would better prepare us for professional challenges.</p>
+
+                        <h3>Overall Assessment</h3>
+                        <p>The PESE classes have laid a strong foundation, and with a few adjustments, they can become even more beneficial for students preparing to enter the professional world. I appreciate the efforts of the instructors and look forward to more interactive and skill-oriented sessions in the future.</p>
+
+                        <div class="feedback-conclusion">
+                            <p>Thank you for considering this feedback. I am confident that these enhancements will make the PESE sessions more engaging and valuable for all students.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Initialize ScrollReveal
+        ScrollReveal().reveal('.scrollreveal', {
+            delay: 200,
+            distance: '50px',
+            duration: 1000,
+            origin: 'bottom',
+            interval: 100
+        });
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const sidebar = document.querySelector('.sidebar');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        // Close sidebar when clicking outside on mobile
+        document.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 && 
+                !sidebar.contains(e.target) && 
+                !mobileMenuBtn.contains(e.target)) {
+                sidebar.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html> 
